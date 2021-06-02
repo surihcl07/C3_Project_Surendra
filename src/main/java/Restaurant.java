@@ -66,5 +66,15 @@ public class Restaurant {
     public String getLocation() {
 		return location;
 	}
+    public double getOrderValue() {
+    	double sum=0;
+    	for (Item item: menu) {
+    		sum = sum+item.getPrice();
+    	}
+    	return sum;	
+    }
+    public void displayOrderDetails() {
+    	System.out.println("Your oder will cost:"+ getOrderValue());
+    }
 
 }
